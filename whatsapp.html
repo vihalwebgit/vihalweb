@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <body style="background-color:#c7d5ea;"leftmargin="0" marginwidth="0" topmargin="0" marginheight="0" offset="0">
+    	<center>
+        	<table border="0" cellpadding="0" cellspacing="0" height="100%" width="100%" id="backgroundTable">
+            	<tr>
+                	<td align="center" valign="top" style="padding-top:50px;">
+                    	<table border="0" cellpadding="0" cellspacing="0" height="100%" width="100%" id="templateContainer">
+                        	<tr>
+                            	<td align="center" valign="top">
+    <style>    input:focus::placeholder {
+        color: transparent;
+      }
+    </style>
+
+<!--<html oncontextmenu="return false">-->
+    <style> 
+        input[type=button], input[type=submit], input[type=reset] {
+          background-color: #34568b;
+          border: none;
+          color: white;
+          padding: 8px 30px;
+          text-decoration: none;
+          margin: 4px 2px;
+          cursor: pointer;
+          border-radius: 10px;
+          font-size: 16px;
+          /*margin-inline: 10px;*/
+        }
+        </style>
+            <style>
+        div.wrapper {
+            width: 300px;
+            height:300px;
+            border:1px solid black;
+        }
+
+        input[type="text"] {
+             display: block;
+             margin : 0 auto;
+        }
+
+    </style>
+    <style>
+        .myDiv2 {
+          border: 0px outset rgb(255, 255, 255);
+          background-color: rgb(255, 255, 255);    
+          text-align: center;
+          padding: 10px;
+          box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        transition: 0.3s;
+        height: 100%;
+        width: 85%;
+        }
+        </style>
+    <style> 
+    #rcorners1 {
+      border-radius: 25px;
+      background: #73AD21;
+      padding: 20px; 
+      width: 200px;
+      height: 150px;  
+    }
+    </style>
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+    $(document).ready(function(){
+        // Get value on button click and show alert
+        // $("#myBtn").click(function(){
+        //     var str = $("#myInput").val();
+        //     var text="www.vihalWeb.com/" + "" + str;
+        //      {  window.open(text);};  
+        //                             });
+        $("#myInput").focus();
+                              });
+            function RedirectUrl(){
+                var str = $("#myInput").val();
+                if(str==""){
+                  alert("Please Enter Phone Number");
+                  $("#myInput").focus();
+                  return;
+                }
+                if(str.length < 10){
+                  alert("Enter valid mobile number");
+                  $("#myInput").focus();
+                  return;
+                }
+                location.href="https://api.whatsapp.com/send?phone=91" + "" + str;
+                $("#myInput").value = ' ';
+               /* location.href="https://vihalweb.com/" + "" + str;*/
+               window.open("href"); 
+               $("#myInput").val('');          
+            }
+            $("#myInput").keydown(function (e) {
+  if (e.keyCode == 13) {
+    $("#chat").click();
+  }
+});
+    </script>
+    
+    <div class="myDiv2">
+        <p style="color: #34568b;font-size:20px;font-weight: bold;font-family: system-ui;">Open a chat with a number without saving it in your phonebook</p>
+    <!-- <div class="myDiv2">
+          <p style="color: #34568b;font-size:20px;font-weight: bold;font-family: system-ui;">Send WhatsApp Message to Unsaved Number Without Adding Contact</p> -->
+<p>Enter mobile number and click on chat</p>
+<!--<label for="phone">Enter Phone Number:</label>-->
+<input type="tel" id="myInput" name="phone" minlength="10" maxlength="10" required
+oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*)\./g, '$1');" 
+ pattern="[6-9]{1}[0-9]{9}" style="height: 40px;font-size: large;text-align: -webkit-match-parent;"
+placeholder="Enter Phone Number" >
+<!-- <button id="myBtn" class="float-left submit-button" onclick="RedirectUrl()" >Chat</button> -->
+<br>
+<br>
+<input type="button" onclick="RedirectUrl()" value="Chat" id="chat">
+<input type="reset" onclick="document.getElementById('myInput').value = ''" value="Clear">
+<br>
+<br>
+<a href="whatsapp://send?text=Hey I'm using https://vihalweb.com/whatsapp to send whatsapp message without saving mobile number" data-action="share/whatsapp/share">Share via Whatsapp</a>
+</div>
+</table>
+<div> 
+<p style="font-size: x-small;bottom: 0%; position: fixed">Disclaimer: This Site/App is not affiliated with nor endorsed by WhatsApp Inc.
+  <br>Note: Works with Valid Indian Mobile Number Only. <br> Vihalweb.com uses WhatsApp's public api (https://faq.whatsapp.com/en/android/26000030/)</p>
+<!--<p style="font-size: x-small;">If you want to send a message to someone but don’t want to save their number to your phonebook? Then vihalweb.com has a tool for you.</p> -->
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</body>
+</html>
